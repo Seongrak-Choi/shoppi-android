@@ -89,7 +89,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_banner_detail_product_discount_label"
+        android:id="@+id/tv_banner_detail_product_discount_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tv_banner_detail_product_label"
@@ -102,12 +102,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_banner_detail_product_discount_label"
-        app:layout_constraintStart_toEndOf="@+id/tv_banner_detail_product_discount_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_banner_detail_product_discount_rate"
+        app:layout_constraintStart_toEndOf="@+id/tv_banner_detail_product_discount_rate"
         tools:text="89,000원"
         />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_banner_detail_product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/tv_banner_detail_product_discount_price"
