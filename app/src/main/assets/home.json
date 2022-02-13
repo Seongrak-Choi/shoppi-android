@@ -35,6 +35,22 @@
         "thumbnail_image_url": "https://user-images.githubusercontent.com/71002525/151024113-0ef3d8a7-a71b-4caa-9531-34f7255e99ce.png",
         "product_id": "desk-1"
       }
+    },
+    {
+      "background_image_url": "https://user-images.githubusercontent.com/71002525/151024105-ebd9093a-aada-465c-bec9-5c1ccdf8fa12.png",
+      "badge": {
+        "label": "기획전",
+        "background_color": "#52514d"
+      },
+      "label": "따스한 겨울\n준비하기",
+      "product_detail": {
+        "brand_name": "twg.official",
+        "label": "캐시미어 100% 터틀넥 스웨터",
+        "discount_rate": 9,
+        "price": 102000,
+        "thumbnail_image_url": "https://user-images.githubusercontent.com/71002525/151024117-1f278a4d-58eb-47a6-b006-374074c9cec5.png",
+        "product_id": "FW-twg-sweater-1"
+      }
     }
   ]
 }
