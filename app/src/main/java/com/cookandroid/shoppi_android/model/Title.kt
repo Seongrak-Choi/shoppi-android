@@ -1,4 +1,4 @@
-package com.cookandroid.shoppi_android
+package com.cookandroid.shoppi_android.model
 
 import com.google.gson.annotations.SerializedName
 

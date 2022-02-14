@@ -1,10 +1,10 @@
-package com.cookandroid.shoppi_android
+package com.cookandroid.shoppi_android.ui
 
-import android.app.LoaderManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.cookandroid.shoppi_android.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

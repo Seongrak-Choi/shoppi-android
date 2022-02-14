@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    dataBinding{
+        enabled=true
+    }
 }
 
 dependencies {
@@ -42,8 +46,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
     //프레그먼트 이동시 네비게이션 컴포넌트를 사용하기 위한 라이브러리
-    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion" //요놈 때문에 viewModels()사용이 가능함. 왜냐하면 fragment-ktx를 참조하고 있기 때문에
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
+
+    //viewModels를 사용하기 위함
+    implementation "androidx.fragment:fragment-ktx:1.4.1" //어차피 위에서 참조하고 있지만, 혹시라도 네비게이션 컴포넌트 라이브러리를 삭제하게 될 경우 viewModels가 안되는 것을 방지하기 위해 추가해 줌.
 
     //Glide라이브러리
     implementation "com.github.bumptech.glide:glide:$glideVersion"
@@ -51,6 +58,8 @@ dependencies {
 
     //Gson 라이브러리
     implementation 'com.google.code.gson:gson:2.8.9'
+
+
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

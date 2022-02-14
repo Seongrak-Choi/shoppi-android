@@ -1,4 +1,4 @@
-package com.cookandroid.shoppi_android
+package com.cookandroid.shoppi_android.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -8,7 +8,7 @@ data class Banner(
     val badge: BannerBadge,
     val label : String,
     @SerializedName("product_detail")
-    val productDetail:ProductDetail
+    val productDetail: ProductDetail
 )
 
 data class BannerBadge(
