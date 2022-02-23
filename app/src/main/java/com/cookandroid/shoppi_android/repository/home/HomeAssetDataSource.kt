@@ -1,4 +1,4 @@
-package com.cookandroid.shoppi_android.repository
+package com.cookandroid.shoppi_android.repository.home
 
 import com.cookandroid.shoppi_android.AssetLoader
 import com.cookandroid.shoppi_android.model.HomeData
