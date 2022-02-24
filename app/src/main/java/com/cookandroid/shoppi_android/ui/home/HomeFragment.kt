@@ -44,8 +44,6 @@ class HomeFragment : Fragment() {
 //            //네비게이션 컴포넌트 사용
 //            findNavController().navigate(R.id.action_home_to_product_detail)
 //        }
-
-
         setToolbar()
         setTopBanners()
     }

@@ -45,6 +45,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
 
     //프레그먼트 이동시 네비게이션 컴포넌트를 사용하기 위한 라이브러리
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion" //요놈 때문에 viewModels()사용이 가능함. 왜냐하면 fragment-ktx를 참조하고 있기 때문에

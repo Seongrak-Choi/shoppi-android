@@ -5,10 +5,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.cookandroid.shoppi_android.R
+import com.cookandroid.shoppi_android.common.KEY_CATEGORY_ID
+import com.cookandroid.shoppi_android.common.KEY_CATEGORY_LABEL
 import com.cookandroid.shoppi_android.databinding.FragmentCategoryBinding
+import com.cookandroid.shoppi_android.ui.common.EventObserver
 import com.cookandroid.shoppi_android.ui.common.ViewModelFactory
 
 class CategoryFragment:Fragment() {
@@ -28,11 +33,21 @@ class CategoryFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        val categoryAdapter = CategoryAdapter()
+        val categoryAdapter = CategoryAdapter(viewModel)
         binding.rvCategoryList.adapter = categoryAdapter
         viewModel.items.observe(viewLifecycleOwner){
             categoryAdapter.submitList(it)
         }
+
+        viewModel.openCategoryEvent.observe(viewLifecycleOwner,EventObserver{
+            openCategoryDetail(it.categoryId,it.label)
+        })
+    }
+
+    private fun openCategoryDetail(categoryId: String, categoryLabel:String){
+        findNavController().navigate(R.id.action_category_to_category_detail, bundleOf(
+            KEY_CATEGORY_ID to categoryId,
+            KEY_CATEGORY_LABEL to categoryLabel
+        ))
     }
 }

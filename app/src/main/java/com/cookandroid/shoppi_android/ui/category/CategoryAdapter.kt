@@ -9,7 +9,7 @@ import com.cookandroid.shoppi_android.databinding.ItemCategoryBinding
 import com.cookandroid.shoppi_android.model.Category
 
 
-class CategoryAdapter : ListAdapter<Category, CategoryAdapter.ViewHolder>(
+class CategoryAdapter(private val viewModel:CategoryViewModel) : ListAdapter<Category, CategoryAdapter.ViewHolder>(
     CategoryDiffCallback()
 ) {
 
@@ -17,6 +17,7 @@ class CategoryAdapter : ListAdapter<Category, CategoryAdapter.ViewHolder>(
     inner class ViewHolder(private val binding:ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(category:Category){
             binding.cateogry = category
+            binding.viewModel = viewModel
             binding.executePendingBindings()
         }
     }
