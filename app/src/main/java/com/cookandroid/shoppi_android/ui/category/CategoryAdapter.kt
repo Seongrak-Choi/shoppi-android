@@ -2,11 +2,11 @@ package com.cookandroid.shoppi_android.ui.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.cookandroid.shoppi_android.databinding.ItemCategoryBinding
 import com.cookandroid.shoppi_android.model.Category
+import com.cookandroid.shoppi_android.ui.common.CategoryDiffCallback
 
 
 class CategoryAdapter(private val viewModel:CategoryViewModel) : ListAdapter<Category, CategoryAdapter.ViewHolder>(
@@ -32,13 +32,3 @@ class CategoryAdapter(private val viewModel:CategoryViewModel) : ListAdapter<Cat
     }
 }
 
-class CategoryDiffCallback : DiffUtil.ItemCallback<Category>(){
-    override fun areItemsTheSame(oldItem: Category, newItem: Category): Boolean {
-        return oldItem.categoryId == newItem.categoryId
-    }
-
-    override fun areContentsTheSame(oldItem: Category, newItem: Category): Boolean {
-        return oldItem == newItem
-    }
-
-}
